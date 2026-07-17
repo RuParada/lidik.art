@@ -50,6 +50,7 @@ function my_awesome_func( WP_REST_Request $request ) {
 function display_image_sizes($sizes) {
     global $img_sizes;
     $img_sizes = $sizes;
+    return $sizes;
 }
 
 add_filter('image_size_names_choose', 'display_image_sizes');
