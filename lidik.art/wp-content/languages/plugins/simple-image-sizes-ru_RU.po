@@ -1,0 +1,307 @@
+# Translation of Plugins - Simple Image Sizes - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Simple Image Sizes - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-01-07 10:04:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Simple Image Sizes - Stable (latest release)\n"
+
+#: classes/admin/Media.php:197 classes/admin/Media.php:202
+#: classes/admin/Media.php:204
+msgid "custom_image_sizes["
+msgstr "custom_image_sizes["
+
+#: classes/admin/Post.php:54
+msgid "Regenerate image sizes"
+msgstr "Преобразовать размеры изображений"
+
+#: classes/admin/Post.php:79
+msgid "There is no media attached to this content."
+msgstr "К этому содержимому не прикреплены никакие медиафайлы."
+
+#. Author URI of the plugin
+msgid "http://nicolas-juen.fr"
+msgstr "http://nicolas-juen.fr"
+
+#. Author of the plugin
+msgid "Rahe"
+msgstr "Rahe"
+
+#. Description of the plugin
+msgid "Add options in media setting page for images sizes"
+msgstr "Добавить параметры на странице настроек мультимедиа для размеров изображений"
+
+#. Plugin URI of the plugin
+msgid "https://github.com/Rahe/simple-image-sizes"
+msgstr "https://github.com/Rahe/simple-image-sizes"
+
+#. Plugin Name of the plugin
+msgid "Simple Image Sizes"
+msgstr "Simple Image Sizes"
+
+#: templates/options-media.php:150
+msgid "Last image:"
+msgstr "Последнее изображение:"
+
+#: templates/options-media.php:139
+msgid "Calculating..."
+msgstr "Подсчет..."
+
+#: templates/options-media.php:138
+msgid "End time calculated :"
+msgstr "Конечное время подсчета:"
+
+#: templates/options-media.php:88 templates/options-media.php:119
+msgid "Post type"
+msgstr "Тип записи"
+
+#: templates/options-media.php:81
+msgid "Select which post type source thumbnails you want to rebuild:"
+msgstr "Выберите исходные миниатюры записи, которые вы хотите перестроить:"
+
+#: templates/options-media.php:20 templates/options-media.php:76
+msgid "Crop ?"
+msgstr "Кадрировать?"
+
+#: templates/options-media.php:19 templates/options-media.php:75
+msgid "Height"
+msgstr "Высота"
+
+#: templates/options-media.php:18 templates/options-media.php:74
+msgid "Width"
+msgstr "Ширина"
+
+#: templates/options-media.php:17 templates/options-media.php:73
+msgid "Size name"
+msgstr "Название размера"
+
+#: templates/options-media.php:10
+msgid "Select which thumbnails you want to rebuild:"
+msgstr "Выберите, какие миниатюры вы хотите перестроить:"
+
+#: templates/options-media.php:152 classes/admin/Post.php:253
+#: classes/admin/Post.php:262
+msgid "Regenerate Thumbnails"
+msgstr "Пересоздать миниатюры"
+
+#: classes/admin/Post.php:227
+msgid "Regenerate thumbnails"
+msgstr "Преобразование миниатюр"
+
+#: classes/admin/Media.php:564
+msgid "Regeneration ended"
+msgstr "Преобразование закончено"
+
+#: classes/admin/Media.php:510 classes/admin/Post.php:73
+#: classes/admin/Post.php:135
+msgid "Trying to cheat ?"
+msgstr "Попытаться обмануть?"
+
+#: classes/admin/Media.php:284
+msgid "Admin option-media template missing"
+msgstr "Отсутствует шаблон медиа-опций администратора"
+
+#: classes/admin/Media.php:268
+msgid "Copy and paste the code below into your WordPress theme function file if you wanted to save them and deactivate the plugin."
+msgstr "Скопируйте и вставьте приведенный ниже код в файл function вашей темы WordPress, если вы хотите сохранить их и деактивировать плагин."
+
+#: classes/admin/Media.php:267
+msgid "Get the PHP for the theme"
+msgstr "Получить PHP для вставки в тему"
+
+#: classes/admin/Media.php:253
+msgid "Add a new size of thumbnail"
+msgstr "Добавить новый размер миниатюры"
+
+#: classes/admin/Media.php:217
+msgid "Cropping"
+msgstr "Кадрирование"
+
+#: classes/admin/Media.php:153
+msgid "Thumbnail regeneration"
+msgstr "Преобразование миниатюры"
+
+#: classes/admin/Media.php:145
+msgid "Get php for theme"
+msgstr "Получить php для вставки в тему"
+
+#: classes/admin/Media.php:137
+msgid "Add a new size"
+msgstr "Добавить новый размер"
+
+#: classes/admin/Media.php:120
+msgid "%s size"
+msgstr "%s размер"
+
+#: classes/admin/Media.php:80
+msgid "Settings"
+msgstr "Настройки"
+
+#: templates/options-media.php:42 classes/admin/Main.php:197
+msgid "Yes"
+msgstr "Да"
+
+#: templates/options-media.php:42 classes/admin/Main.php:196
+msgid "No"
+msgstr "Нет"
+
+#: classes/admin/Main.php:189
+msgid "bottom"
+msgstr "низ"
+
+#: classes/admin/Main.php:188
+msgid "center"
+msgstr "центр"
+
+#: classes/admin/Main.php:187
+msgid "top"
+msgstr "верх"
+
+#: classes/admin/Main.php:183
+msgid "Right"
+msgstr "Справа"
+
+#: classes/admin/Main.php:182
+msgid "Center"
+msgstr "В центре"
+
+#: classes/admin/Main.php:181
+msgid "Left"
+msgstr "Слева"
+
+#: classes/admin/Main.php:131
+msgid "This file does not exists and have not been regenerated :<br/><a target=\"_blank\" href=\"%1$s\" >%2$s</a>"
+msgstr "Этот файл не существует и не был регенерирован :<br/><a target=\"_blank\" href=\"%1$s\" >%2$s</a>"
+
+#: classes/admin/Main.php:116
+msgid "This file already exists in this size and have not been regenerated :<br/><a target=\"_blank\" href=\"%1$s\" >%2$s</a>"
+msgstr "Этот файл уже существует в данном размере и не был регенерирован : <br/><a target=\"_blank\" href=\"%1$s\" >%2$s</a>"
+
+#: classes/admin/Main.php:98
+msgid "No id given in POST datas."
+msgstr "ID не указан в данных POST."
+
+#: classes/admin/Main.php:75
+msgid "This image has been regenerated in %s seconds"
+msgstr "Это изображение было регенерировано за %s секунд"
+
+#: classes/admin/Main.php:70
+msgid "All the sizes you have modified are not saved, continue anyway ?"
+msgstr "Все размеры, которые вы изменили, не сохраняются, продолжать в любом случае?"
+
+#: classes/admin/Main.php:69
+msgid "Error during the php treatment, be sure to not have php errors in your page"
+msgstr "Ошибка при обработке php, убедитесь, что на вашей странице нет ошибок php"
+
+#: classes/admin/Main.php:68
+msgid " finished at :"
+msgstr " завершено в:"
+
+#: classes/admin/Media.php:210 classes/admin/Main.php:67
+msgid "Public name"
+msgstr "Публичное имя"
+
+#: classes/admin/Main.php:66
+msgid " started at"
+msgstr " запущено в"
+
+#: classes/admin/Main.php:65
+msgid "Validate"
+msgstr "Проверить"
+
+#: classes/admin/Main.php:64
+msgid "images have been regenerated !"
+msgstr "Изображения были преобразованы!"
+
+#: classes/admin/Main.php:63
+msgid "Error requesting page"
+msgstr "Ошибка при запросе страницы"
+
+#: classes/admin/Media.php:236 classes/admin/Main.php:62
+msgid "Update"
+msgstr "Обновить"
+
+#: classes/admin/Main.php:61
+msgid "Do you really want to delete these size ?"
+msgstr "Вы действительно хотите удалить этот размер?"
+
+#: classes/admin/Main.php:60
+msgid "This size is already registered, edit it instead of recreating it."
+msgstr "Этот размер уже зарегистрирован, отредактируйте его, а не создавайте заново."
+
+#: classes/admin/Main.php:59
+msgid "Don't use the basic WordPress thumbnail size name, use the form above to edit them"
+msgstr "Не используйте базовое название размера миниатюр WordPress, используйте форму выше для их редактирования"
+
+#: classes/admin/Main.php:58
+msgid "Size"
+msgstr "Размер"
+
+#: classes/admin/Main.php:57
+msgid "Done."
+msgstr "Готово."
+
+#: classes/admin/Main.php:56
+msgid "Validate image size name"
+msgstr "Подтвердить название размера изображения"
+
+#: classes/admin/Main.php:55
+msgid "Regenerate "
+msgstr "Преобразовать"
+
+#: classes/admin/Main.php:54
+msgid "Regenerating "
+msgstr "Преоразование"
+
+#: classes/admin/Main.php:53
+msgid "No media in your site to regenerate !"
+msgstr "Нет медиафайлов для преобразования !"
+
+#: classes/admin/Media.php:235 classes/admin/Main.php:52
+msgid "Delete"
+msgstr "Удалить"
+
+#: classes/admin/Main.php:51
+msgid " before the end."
+msgstr " перед окончанием."
+
+#: classes/admin/Main.php:50
+msgid " or "
+msgstr "или"
+
+#: classes/admin/Main.php:49
+msgid " of "
+msgstr "из"
+
+#: classes/admin/Media.php:233 classes/admin/Main.php:48
+msgid "Show in post insertion ?"
+msgstr "Показать в вставке записи?"
+
+#: classes/admin/Main.php:47
+msgid "no"
+msgstr "нет"
+
+#: classes/admin/Main.php:46
+msgid "yes"
+msgstr "да"
+
+#: classes/admin/Main.php:45
+msgid "Crop"
+msgstr "Кадрировать"
+
+#: classes/admin/Media.php:203 classes/admin/Main.php:44
+msgid "Maximum height"
+msgstr "Макс. высота"
+
+#: classes/admin/Media.php:196 classes/admin/Main.php:43
+msgid "Maximum width"
+msgstr "Макс. ширина"
+
+#: classes/admin/Main.php:42
+msgid "Reading attachments..."
+msgstr "Чтение вложений..."

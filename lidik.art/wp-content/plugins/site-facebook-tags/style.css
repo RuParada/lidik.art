@@ -1,0 +1,23 @@
+.fb_share_settings table input:not([type="button"]) {
+    width: 100%;
+}
+
+.fb_share_settings table textarea {
+
+    height: 200px;
+    width: 100%;
+}
+
+.fb_share_settings table {
+    display: inline-block;
+    width: 50%;
+}
+
+.fb_share_settings img {
+    width: 50%;
+    float: right;
+}
+
+.clear-fix {
+    clear: both;
+}

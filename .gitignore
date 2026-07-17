@@ -1,0 +1,14 @@
+*.sql
+*.sql.gz
+*.zip
+docker-compose.yml
+lidik.art/wp-config.php
+lidik.art/wp-config.php.orig
+lidik.art/wp-content/cache/
+lidik.art/wp-content/upgrade/
+lidik.art/wp-content/wpo-cache/
+lidik.art/wp-content/ai1wm-backups/
+lidik.art/wp-content/debug.log
+.DS_Store
+lidik.art/wp-content/themes/lidikart-v2.6.11/dist.orig/
+lidik.art/wp-config.php.bak

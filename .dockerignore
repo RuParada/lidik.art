@@ -1,0 +1,11 @@
+*.sql
+*.zip
+.git
+.DS_Store
+lidik.art/wp-config.php
+lidik.art/wp-config.php.orig
+lidik.art/wp-config.php.bak
+lidik.art/wp-content/cache
+lidik.art/wp-content/wpo-cache
+lidik.art/wp-content/upgrade
+**/*.js.map
