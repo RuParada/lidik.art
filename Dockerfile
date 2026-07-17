@@ -32,3 +32,15 @@ RUN rm -f /var/www/html/wp-config.railway.php \
 CMD sed -ri "s/^Listen 80$/Listen ${PORT:-80}/" /etc/apache2/ports.conf && \
     sed -ri "s/:80>/:${PORT:-80}>/" /etc/apache2/sites-available/000-default.conf && \
     apache2-foreground
+
+# --- MPM guard ---
+RUN set -eux; \
+    a2dismod -f mpm_event  || true; \
+    a2dismod -f mpm_worker || true; \
+    a2enmod mpm_prefork; \
+    echo "=== MPM enabled:"; \
+    ls -1 /etc/apache2/mods-enabled/ | grep mpm || true; \
+    n="$(ls -1 /etc/apache2/mods-enabled/ | grep -c 'mpm_.*\.load' || true)"; \
+    echo "=== MPM count: $n"; \
+    test "$n" = "1"; \
+    apache2ctl -t
