@@ -38,6 +38,10 @@ RUN set -eux; \
     test "$(ls -1 /etc/apache2/mods-enabled/ | grep -c 'mpm_.*\.load')" = "1"; \
     apache2ctl -t
 
-CMD sed -ri "s/^Listen 80$/Listen ${PORT:-80}/" /etc/apache2/ports.conf && \
+CMD rm -f /etc/apache2/mods-enabled/mpm_event.* /etc/apache2/mods-enabled/mpm_worker.*; \
+    ln -sf ../mods-available/mpm_prefork.load /etc/apache2/mods-enabled/mpm_prefork.load; \
+    ln -sf ../mods-available/mpm_prefork.conf /etc/apache2/mods-enabled/mpm_prefork.conf; \
+    echo "=== MPM at start: $(ls -1 /etc/apache2/mods-enabled/ | grep mpm | tr '\n' ' ')"; \
+    sed -ri "s/^Listen 80$/Listen ${PORT:-80}/" /etc/apache2/ports.conf && \
     sed -ri "s/:80>/:${PORT:-80}>/" /etc/apache2/sites-available/000-default.conf && \
     apache2-foreground
