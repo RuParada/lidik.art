@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       default-mysql-client unzip less ca-certificates curl \
   && docker-php-ext-configure gd --with-jpeg --with-freetype --with-webp \
   && docker-php-ext-install -j"$(nproc)" mysqli gd zip exif intl opcache \
-  && a2enmod rewrite headers \
+  && a2dismod mpm_event mpm_worker 2>/dev/null; a2enmod mpm_prefork rewrite headers && true \
   && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL -o /usr/local/bin/wp \
