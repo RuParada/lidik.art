@@ -1,0 +1,152 @@
+/*
+Theme Name: LidikART v3
+Theme URI: https://www.lidik.art
+Author: Lidiia Ma / design by Claude
+Description: Dark gallery theme for the LidikART portfolio — paintings, wall murals, biography. English, with light/dark mode toggle.
+Version: 3.0.0
+Requires at least: 5.0
+Requires PHP: 7.2
+License: GNU General Public License v2 or later
+Text Domain: lidikart
+*/
+
+/* ---------- tokens ---------- */
+:root{
+  --bg:#151020; --bg2:#0d0a14; --ink:#f2edf7; --mut:#b3a9c2; --mut2:#8d81a0;
+  --line:rgba(255,255,255,.09); --link:#e2b6d4; --link-h:#fff;
+  --frame:#0d0a14; --glow1:rgba(170,80,150,.28); --glow2:rgba(200,110,170,.35);
+  --logo-inv:brightness(0) invert(1); --face-f:brightness(1.9);
+  --card-sh:0 16px 40px -12px rgba(0,0,0,.7); --hero-sh:0 30px 80px -20px rgba(0,0,0,.8);
+  --panel:rgba(255,255,255,.04);
+  --accent:oklch(0.62 0.16 340); --accent-h:oklch(0.55 0.16 340);
+  --font-serif:'Kurale',serif; --font-sans:'Golos Text',system-ui,sans-serif;
+  --font-logo:'Comfortaa',sans-serif; --font-caps:'Oswald',sans-serif;
+}
+html[data-theme="light"]{
+  --bg:#faf6f2; --ink:#241c2b; --mut:#5f5468; --mut2:#8a7d94;
+  --line:rgba(40,25,50,.13); --link:#8d3f74; --link-h:#5a2f4c;
+  --frame:#ffffff; --glow1:rgba(170,80,150,.12); --glow2:rgba(200,110,170,.16);
+  --logo-inv:none; --face-f:none;
+  --card-sh:0 16px 40px -18px rgba(60,30,60,.30); --hero-sh:0 30px 70px -24px rgba(60,30,60,.45);
+  --panel:rgba(60,30,60,.05);
+}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);font-size:16px;line-height:1.6;transition:background .3s,color .3s}
+img{max-width:100%;height:auto}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-h)}
+h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.15;margin:0 0 .4em}
+h1{font-size:52px} h2{font-size:32px} h3{font-size:24px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+.muted{color:var(--mut)} .muted2{color:var(--mut2)}
+
+/* ---------- header ---------- */
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 56px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-text{display:flex;flex-direction:column;gap:3px}
+.logo-name{font-family:var(--font-logo);font-weight:700;font-size:29px;color:#a04c74;line-height:1}
+.logo-sub{font-family:var(--font-caps);font-weight:400;font-size:14px;letter-spacing:.24em;color:var(--ink);line-height:1}
+.logo-face{height:56px;width:auto;filter:var(--face-f)}
+.site-nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:14.5px;font-weight:500;flex-wrap:wrap}
+.site-nav a{color:var(--mut)}
+.site-nav a:hover,.site-nav .current-menu-item a,.site-nav .current_page_item a{color:var(--link)}
+.theme-toggle{width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.theme-toggle:hover{border-color:var(--mut2)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:16px 32px;font-size:15px;font-weight:600;border-radius:999px;border:none;cursor:pointer}
+.btn:hover{background:var(--accent-h);color:#fff}
+.link-underline{font-size:15px;font-weight:600;border-bottom:1px solid var(--line);padding-bottom:2px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 75% 40%,var(--glow1),transparent 65%)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1fr 460px;gap:72px;align-items:center;padding:80px 56px}
+.hero h1{font-size:60px;margin-bottom:24px}
+.hero p{font-size:17px;line-height:1.7;color:var(--mut);max-width:500px;margin:0 0 38px}
+.hero-art{position:relative;margin:0}
+.hero-art::before{content:"";position:absolute;inset:-30px;background:radial-gradient(closest-side,var(--glow2),transparent);filter:blur(30px)}
+.hero-art img{position:relative;width:100%;height:580px;object-fit:cover;border:10px solid var(--frame);box-shadow:var(--hero-sh)}
+.hero-art figcaption{position:relative;margin-top:14px;text-align:center;font-size:13px;color:var(--mut2)}
+.hero-art figcaption b{font-family:var(--font-serif);font-weight:400;font-size:16px;color:var(--ink)}
+
+/* ---------- sections ---------- */
+.section{padding:48px 56px}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:8px}
+.filter-row{display:flex;gap:26px;font-size:13.5px;flex-wrap:wrap}
+.filter-row a{color:var(--mut2)}
+.filter-row a:hover{color:var(--ink)}
+.filter-row a.active{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:3px}
+
+/* ---------- art grid ---------- */
+.art-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:22px 0}
+.art-grid figure{margin:0}
+.art-grid img{width:100%;height:300px;object-fit:cover;border:6px solid var(--frame);box-shadow:var(--card-sh)}
+.art-grid figcaption{margin-top:10px;font-family:var(--font-serif);font-size:14.5px}
+.art-grid figcaption small{display:block;font-family:var(--font-sans);font-size:11.5px;color:var(--mut2);margin-top:2px}
+
+/* ---------- murals ---------- */
+.stat-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:0 0 34px}
+.stat-card{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--panel)}
+.stat-card .big{font-family:var(--font-serif);font-size:32px}
+.stat-card .big span{font-size:15px;color:var(--mut2)}
+.stat-card p{font-size:13.5px;color:var(--mut);margin:6px 0 0;line-height:1.55}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:0 0 38px}
+.step{display:flex;gap:12px;align-items:baseline}
+.step .n{font-family:var(--font-serif);font-size:24px;color:var(--link)}
+.step p{font-size:14px;color:var(--mut);line-height:1.55;margin:0}
+.step b{color:var(--ink)}
+.mural-slots{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;margin:0 0 34px}
+.mural-slot{height:300px;border:1px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--mut2);font-size:13px;background:var(--panel)}
+.mural-slot img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+
+/* ---------- buy strip ---------- */
+.buy-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 56px;display:flex;align-items:center;gap:44px}
+.buy-strip .label{font-size:14px;color:var(--mut2);white-space:nowrap}
+.buy-strip .logos{display:flex;gap:44px;align-items:center;flex:1;justify-content:space-around;flex-wrap:wrap}
+.buy-strip img{filter:var(--logo-inv);opacity:.85}
+
+/* ---------- about / bio ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:56px;align-items:center;padding:60px 56px}
+.about-grid img,.bio-grid > div > img{object-fit:cover;border:8px solid var(--frame);box-shadow:var(--card-sh)}
+.bio-grid{display:grid;grid-template-columns:380px 1fr;gap:64px;padding:56px;align-items:start}
+.bio-grid .portrait{width:100%;height:460px;object-fit:cover;border:8px solid var(--frame);box-shadow:var(--card-sh)}
+.timeline{max-width:640px}
+.timeline .row{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:14px 0;border-top:1px solid var(--line)}
+.timeline .row:last-child{border-bottom:1px solid var(--line)}
+.timeline .year{font-family:var(--font-serif);font-size:17px;color:var(--link)}
+
+/* ---------- forms ---------- */
+.form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:flex;flex-direction:column;gap:7px;font-size:12.5px;color:var(--mut2)}
+.form input,.form select,.form textarea{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:13px 18px;color:var(--ink);font-size:14.5px;font-family:inherit}
+.form textarea{border-radius:22px;resize:vertical}
+.form input:focus-visible,.form select:focus-visible,.form textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+/* ---------- footer ---------- */
+.site-footer{background:#0d0a14;padding:34px 56px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.site-footer .flogo{display:flex;align-items:center;gap:10px}
+.site-footer .flogo img{height:34px;filter:brightness(1.9)}
+.site-footer .fname{font-family:var(--font-logo);font-weight:700;font-size:17px;color:#c87ba4;line-height:1.1}
+.site-footer .fsub{font-family:var(--font-caps);font-size:9.5px;letter-spacing:.24em;color:#b5abb9}
+.site-footer .socials{display:flex;gap:18px}
+.site-footer .socials img{height:22px;filter:brightness(0) invert(.75)}
+.site-footer .copy{font-size:13px;color:#6e6480}
+
+/* ---------- single ---------- */
+.single-art{max-width:900px;margin:0 auto;padding:56px}
+.single-art img{border:8px solid var(--frame);box-shadow:var(--card-sh)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;padding:48px 28px}
+  .art-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-cards,.steps,.mural-slots,.form-row{grid-template-columns:1fr}
+  .bio-grid,.about-grid{grid-template-columns:1fr;padding:32px 28px}
+  .section,.buy-strip{padding-left:28px;padding-right:28px}
+  .site-header{padding:14px 20px}
+  h1,.hero h1{font-size:38px}
+}
